@@ -27,7 +27,7 @@ public class ProductController {
     @PostMapping
     ResponseEntity<ProductDescription> createProduct(@Valid @RequestBody ProductDescription product) {
         try {
-            ProductDescription newProuct = productService.createPrice(product);
+            ProductDescription newProuct = productService.createProduct(product);
             return new ResponseEntity<>(newProuct, HttpStatus.CREATED);
         } catch (Exception ex) {
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);

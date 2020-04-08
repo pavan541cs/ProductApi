@@ -20,7 +20,7 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public ProductDescription createPrice(ProductDescription product) {
+    public ProductDescription createProduct(ProductDescription product) {
         log.debug("Creating product with product id ${}", product.getProduct_id());
         return productRepository.save(product);
     }
